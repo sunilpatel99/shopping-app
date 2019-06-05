@@ -10,6 +10,7 @@ import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-edit.component';
 import { ModalDialogModule } from 'ngx-modal-dialog';
 import { DropDownDirective} from './shared/dropDown.directive';
+import { TestcomponentComponent } from './testcomponent/testcomponent.component';
  
 @NgModule({
   declarations: [
@@ -21,13 +22,15 @@ import { DropDownDirective} from './shared/dropDown.directive';
     RecipesItemComponent,
     ShoppingListComponent,
     ShoppingEditComponent,
-    DropDownDirective 
+    DropDownDirective,
+    TestcomponentComponent 
   ],
   imports: [
     BrowserModule,
     ModalDialogModule.forRoot()
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  exports: [TestcomponentComponent]
 })
 export class AppModule { }
